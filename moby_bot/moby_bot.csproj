@@ -106,6 +106,7 @@
   <ItemGroup>
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
+    <Content Include="sounds\11.mp3" />
     <Content Include="src\css\botchat.css" />
     <Content Include="src\js\botchat.js" />
     <Content Include="Web.config">

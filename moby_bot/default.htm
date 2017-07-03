@@ -15,10 +15,17 @@
 
 
     <!-- CSS References -->
-    <link href="src/css/botchat.css" rel="stylesheet" />     
+    <link href="src/css/botchat.css" rel="stylesheet" />
+    <!-- Boostrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- JS References -->
     <script src="src/js/botchat.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
     <style>
 
@@ -77,9 +84,15 @@
             directLine: {
                 token: "SuDX2QK14Hw.cwA.g_c.iLNHsOY0ZjLiVzjPbXMiqhGq2bJxVuJvc-RbhFMF__M"
             },
-            user: { id: 'Paul' },
+            user: { id: 'James' },
             bot: { id: 'yourbot' },
         }, document.getElementById("BotChatGoesHere"));
+
+        //test playing sounds
+        $(document).ready(function () {
+            var audio = new Audio('sounds/11.mp3');
+            audio.play();
+        });
     </script>
 </body>
 </html>
