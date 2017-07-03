@@ -21,7 +21,6 @@ namespace moby_bot
             if (activity.Type == ActivityTypes.Message)
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
-
             }
             else
             {
