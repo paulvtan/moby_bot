@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System;
+using Newtonsoft.Json;
 
 namespace moby_bot
 {
@@ -19,6 +21,7 @@ namespace moby_bot
             if (activity.Type == ActivityTypes.Message)
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
+
             }
             else
             {
@@ -57,4 +60,6 @@ namespace moby_bot
             return null;
         }
     }
+
+     
 }

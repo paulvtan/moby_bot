@@ -19,11 +19,11 @@ namespace moby_bot.Dialogs
         {
             var activity = await result as Activity;
 
-            // calculate something for us to return
-            int length = (activity.Text ?? string.Empty).Length;
+            //Call GetQnaReply to get the result
+            QnAMakerResult QnaMakeReply = QnaMaker.GetQnaReply(activity);
 
-            // return our reply to the user
-            await context.PostAsync($"You sent {activity.Text} which was {length} characters");
+            //Reply to user
+            await context.PostAsync(QnaMakeReply.Answer);
 
             context.Wait(MessageReceivedAsync);
         }

@@ -1,12 +1,85 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <meta charset="utf-8" />
+    <!-- Basic Settings -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--  -->
+
+    <title>Moby</title>
+
+    <!-- Google Fonts Reference -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+    <!-- CSS References -->
+    <link href="src/css/botchat.css" rel="stylesheet" />     
+
+    <!-- JS References -->
+    <script src="src/js/botchat.js"></script>
+
+    <style>
+
+        .wc-chatview-panel {
+            width: 390px;
+            height: 570px;
+            position: relative;
+        }
+    </style>
 </head>
-<body style="font-family:'Segoe UI'">
-    <h1>moby_bot</h1>
-    <p>Describe your bot here and your terms of use etc.</p>
-    <p>Visit <a href="https://www.botframework.com/">Bot Framework</a> to register your bot. When you register it, remember to set your bot's endpoint to <pre>https://<i>your_bots_hostname</i>/api/messages</pre></p>
+<body>
+
+    <!-- Chat box for Moby -->
+    <div>
+        <div style="margin-left: 100px; margin-top: 100px" id="BotChatGoesHere" ></div>
+        <div style="clear:both;" ></div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Directline Chat Box Script -->
+    <script>
+        BotChat.App({
+            directLine: {
+                token: "SuDX2QK14Hw.cwA.g_c.iLNHsOY0ZjLiVzjPbXMiqhGq2bJxVuJvc-RbhFMF__M"
+            },
+            user: { id: 'Paul' },
+            bot: { id: 'yourbot' },
+        }, document.getElementById("BotChatGoesHere"));
+    </script>
 </body>
 </html>
