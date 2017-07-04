@@ -26,6 +26,17 @@ namespace moby_bot.Dialogs
             string QnaAnswer = QnaMakeReply.Answer;
             await context.PostAsync(QnaAnswer.Substring(2, QnaAnswer.Length - 2));
 
+
+            //2nd Level Reply
+            string scenarioCode = QnaAnswer.Substring(0, 2);
+
+            switch (scenarioCode)
+            {
+                case "11":
+                    await context.PostAsync("Would you like me to help you allocate this transaction to the right account?");
+                    break;
+            }
+
             context.Wait(MessageReceivedAsync);
         }
     }

@@ -4,10 +4,6 @@ var s11 = "sounds/11.mp3";
 var s12 = "sounds/12.mp3";
 
 
-
-
-
-
 $(document).ready(function () {
     //This function plays a moby voice feedback.
     $("#user-text").keypress(function (e) {
@@ -16,11 +12,11 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 //Scenario 1
+                new Audio(s11).play();
                 if (user_command.includes("hi")) {
-                    new Audio(s11).play();
-
-                } else if (user_command.includes("transaction")) {
-                    new Audio(s12).play();
+                    setTimeout(function () {
+                        new Audio(s12).play();
+                    }, 3500);
                 }
             }, voice_delay);
 
