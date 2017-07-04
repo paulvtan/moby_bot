@@ -23,7 +23,8 @@ namespace moby_bot.Dialogs
             QnAMakerResult QnaMakeReply = QnaMaker.GetQnaReply(activity);
 
             //Reply to user
-            await context.PostAsync(QnaMakeReply.Answer);
+            string QnaAnswer = QnaMakeReply.Answer;
+            await context.PostAsync(QnaAnswer.Substring(2, QnaAnswer.Length - 2));
 
             context.Wait(MessageReceivedAsync);
         }
