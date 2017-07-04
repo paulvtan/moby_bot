@@ -19,18 +19,17 @@ $(document).ready(function () {
             //            new Audio(s12).play();
             //        }, 3500);
             //    }
+            //}, voice_delay);
 
             if (user_command.includes("hi")) {
                 setTimeout(function () {
                     new Audio(s11).play();
                 }, 3500);
-            
                 //----------
 
                 //Scenario 2
                 //----------
 
-            }, voice_delay);
 
         }
     });
