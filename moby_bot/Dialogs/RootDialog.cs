@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using System.Threading;
+using Newtonsoft.Json;
+using AdaptiveCards;
 
 namespace moby_bot.Dialogs
 {
@@ -26,6 +28,26 @@ namespace moby_bot.Dialogs
             //Reply to user
             string QnaAnswer = QnaMakeReply.Answer;
             await context.PostAsync(QnaAnswer.Substring(2, QnaAnswer.Length - 2));
+
+            //Test Adaptive Card
+            var card = new AdaptiveCard();
+            card.Body.Add(new TextBlock()
+            {
+                Text = "Would you like me to help you allocate this transaction to the right account.",
+            });
+
+            var json = JsonConvert.SerializeObject(card);
+
+            Activity replyToConversation = activity.CreateReply("Card");
+            // Create the attachment.
+            Attachment attachment = new Attachment()
+            {
+                ContentType = AdaptiveCard.ContentType,
+                Content = card
+            };
+            replyToConversation.Attachments.Add(attachment);
+            await context.PostAsync(replyToConversation);
+            //-----------------------------------------------------
 
 
             //2nd Level Reply

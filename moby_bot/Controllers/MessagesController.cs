@@ -7,6 +7,7 @@ using Microsoft.Bot.Connector;
 using System;
 using Newtonsoft.Json;
 using System.Web.UI;
+using AdaptiveCards;
 
 namespace moby_bot
 {
@@ -22,6 +23,7 @@ namespace moby_bot
             if (activity.Type == ActivityTypes.Message)
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
+
             }
             else
             {
@@ -61,5 +63,5 @@ namespace moby_bot
         }
     }
 
-     
+
 }
