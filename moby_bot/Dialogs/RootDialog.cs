@@ -29,12 +29,11 @@ namespace moby_bot.Dialogs
 
 
             //2nd Level Reply
-            int delay = 5000;
             string scenarioCode = QnaAnswer.Substring(0, 2);
             switch (scenarioCode)
             {
                 case "11":
-                    Thread.Sleep(delay);
+                    Thread.Sleep(3500);
                     await context.PostAsync("Would you like me to help you allocate this transaction to the right account?");
                     break;
             }
