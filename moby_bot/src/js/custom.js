@@ -28,7 +28,7 @@ $(document).ready(function () {
 
                 setTimeout(function () {
                     new Audio(s12).play();
-                }, 3500)
+                }, 6700)
             }
             //----------
 
