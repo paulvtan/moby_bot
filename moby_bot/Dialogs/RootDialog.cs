@@ -62,7 +62,7 @@ namespace moby_bot.Dialogs
             var heroCard = new HeroCard
             {
                 Text = text,
-                Buttons = new List<CardAction> { new CardAction("postBack", choice1, value: "+" + scenarioNo), new CardAction("invoke", choice2, value: "-" + scenarioNo) }
+                Buttons = new List<CardAction> { new CardAction("imBack", choice1, value: "+" + scenarioNo), new CardAction("invoke", choice2, value: "-" + scenarioNo) }
             };
             Activity replyToConversation = activity.CreateReply();
             // Create the attachment.
