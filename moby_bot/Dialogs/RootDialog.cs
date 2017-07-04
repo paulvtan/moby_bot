@@ -25,20 +25,29 @@ namespace moby_bot.Dialogs
 
             //Call GetQnaReply to get the result
             QnAMakerResult qnaMakeReply = QnaMaker.GetQnaReply(activity);
-
-            //Reply to user
             string qnaAnswer = qnaMakeReply.Answer;
-            await context.PostAsync(qnaAnswer.Substring(2, qnaAnswer.Length - 2));
+
+            //Reply to user if the reply doesn't just contain code otherwise go to level 2
+            if (qnaAnswer.Length > 2)
+            {
+                await context.PostAsync(qnaAnswer.Substring(2, qnaAnswer.Length - 2));
+            }
             //-----------------------------------------------------
 
 
-            //2nd Level Reply
+            //2nd Level card Reply
             string scenarioCode = qnaAnswer.Substring(0, 2);
+            Activity replyToUser;
             switch (scenarioCode)
             {
                 case "11":
                     Thread.Sleep(3000);
-                    Activity replyToUser = createCardActivity(activity, "Would you like me to help you allocate this transaction to the right account?", 11);
+                    replyToUser = createCardActivity(activity, "Yes", "No", "Would you like me to help you allocate this transaction to the right account?", 12);
+                    await context.PostAsync(replyToUser);
+                    break;
+
+                case "13":
+                    replyToUser = createCardActivity(activity, "Income", "Expense", "Was this an income or an expense?", 13);
                     await context.PostAsync(replyToUser);
                     break;
             }
@@ -48,12 +57,12 @@ namespace moby_bot.Dialogs
 
 
         //Create Hero Yes and No card
-        public static Activity createCardActivity(Activity activity,string text, int scenarioNo)
+        public static Activity createCardActivity(Activity activity, string choice1, string choice2, string text, int scenarioNo)
         {
             var heroCard = new HeroCard
             {
                 Text = text,
-                Buttons = new List<CardAction> { new CardAction("postBack","Yes", value: "test"), new CardAction("invoke", "No", value: "No") }
+                Buttons = new List<CardAction> { new CardAction("postBack", choice1, value: "+" + scenarioNo), new CardAction("invoke", choice2, value: "-" + scenarioNo) }
             };
             Activity replyToConversation = activity.CreateReply();
             // Create the attachment.
