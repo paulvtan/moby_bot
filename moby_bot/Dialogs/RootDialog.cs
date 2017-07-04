@@ -58,6 +58,11 @@ namespace moby_bot.Dialogs
                     replyToUser = createCardActivity(activity, "Income", "Expense", "Was this an income or an expense?", 13);
                     await context.PostAsync(replyToUser);
                     break;
+
+                case "16":
+                    replyToUser = createCardActivity(activity, "Yes ", "No", "Sounds like this is an 'Electricity & Gas' expense. Would you like me to allocate this transaction to the 'Electricity & Gas' expense account?", 13);
+                    await context.PostAsync(replyToUser);
+                    break;
             }
 
             context.Wait(MessageReceivedAsync);

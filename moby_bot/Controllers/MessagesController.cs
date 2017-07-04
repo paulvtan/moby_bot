@@ -8,6 +8,8 @@ using System;
 using Newtonsoft.Json;
 using System.Web.UI;
 using AdaptiveCards;
+using Autofac;
+using System.Linq;
 
 namespace moby_bot
 {
@@ -28,13 +30,13 @@ namespace moby_bot
             }
             else
             {
-                HandleSystemMessage(activity);
+                HandleSystemMessageAsync(activity);
             }
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }
 
-        private Activity HandleSystemMessage(Activity message)
+        private async Task<Activity> HandleSystemMessageAsync(Activity message)
         {
             if (message.Type == ActivityTypes.DeleteUserData)
             {
@@ -43,10 +45,9 @@ namespace moby_bot
             }
             else if (message.Type == ActivityTypes.ConversationUpdate)
             {
-                // Handle conversation state changes, like members being added and removed
-                // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
-                // Not available in all channels
-
+                //Handle conversation state changes, like members being added and removed
+                //Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
+                //Not available in all channels
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
