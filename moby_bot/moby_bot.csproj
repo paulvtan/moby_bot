@@ -142,10 +142,6 @@
     <Content Include="bin\zh-hans\Microsoft.Bot.Builder.resources.dll" />
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
-    <Content Include="obj\Debug\Bot Application.dll" />
-    <Content Include="obj\Debug\Bot Application.pdb" />
-    <Content Include="obj\Debug\moby_bot.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\TypeScriptCompilerOutput.txt" />
     <Content Include="sounds\11.mp3" />
     <Content Include="sounds\12.mp3" />
     <Content Include="src\css\botchat.css" />
@@ -166,18 +162,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="obj\Debug\CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\moby_bot.csprojResolveAssemblyReference.cache" />
     <Content Include="bin\Bot Application.dll.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -189,9 +179,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
