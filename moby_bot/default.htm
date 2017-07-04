@@ -26,6 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/js/bootstrap.min.js"></script>
+    <script src="src/js/custom.js"></script>
 
     <style>
 
@@ -46,7 +47,7 @@
 
     <!-- Directline Chat Box Script -->
     <script>
-        var delay = 3200;
+        
         BotChat.App({
             directLine: {
                 token: "SuDX2QK14Hw.cwA.g_c.iLNHsOY0ZjLiVzjPbXMiqhGq2bJxVuJvc-RbhFMF__M"
@@ -55,19 +56,7 @@
             bot: { id: 'yourbot' },
         }, document.getElementById("BotChatGoesHere"));
 
-        //test playing sounds 
-        $("#user-text").keypress(function (e) {
-            if (e.which == 13) {
-                var user_command = $("#user-text").val();
 
-                setTimeout(function () {
-                    if (user_command == "transaction") {
-                        new Audio("sounds/12.mp3").play();
-                    }
-                }, delay);
-
-            }
-        });
 
 
     </script>
