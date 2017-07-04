@@ -104,11 +104,56 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\ar\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\Autofac.dll" />
+    <Content Include="bin\Autofac.xml" />
+    <Content Include="bin\Bot Application.dll" />
+    <Content Include="bin\Bot Application.pdb" />
+    <Content Include="bin\Chronic.dll" />
+    <Content Include="bin\cs\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\de-dE\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\en\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\es\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\fa\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\Microsoft.Bot.Builder.Autofac.dll" />
+    <Content Include="bin\Microsoft.Bot.Builder.Autofac.xml" />
+    <Content Include="bin\Microsoft.Bot.Builder.dll" />
+    <Content Include="bin\Microsoft.Bot.Builder.xml" />
+    <Content Include="bin\Microsoft.Bot.Connector.dll" />
+    <Content Include="bin\Microsoft.Bot.Connector.xml" />
+    <Content Include="bin\Microsoft.IdentityModel.Protocol.Extensions.dll" />
+    <Content Include="bin\Microsoft.IdentityModel.Protocol.Extensions.xml" />
+    <Content Include="bin\Microsoft.Rest.ClientRuntime.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Configuration.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\ru\Microsoft.Bot.Builder.resources.dll" />
+    <Content Include="bin\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="bin\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\zh-hans\Microsoft.Bot.Builder.resources.dll" />
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
+    <Content Include="obj\Debug\Bot Application.dll" />
+    <Content Include="obj\Debug\Bot Application.pdb" />
+    <Content Include="obj\Debug\moby_bot.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TypeScriptCompilerOutput.txt" />
     <Content Include="sounds\11.mp3" />
+    <Content Include="sounds\12.mp3" />
     <Content Include="src\css\botchat.css" />
+    <Content Include="src\js\bootstrap.js" />
+    <Content Include="src\js\bootstrap.min.js" />
     <Content Include="src\js\botchat.js" />
+    <Content Include="src\js\custom.js" />
+    <Content Include="src\js\npm.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -121,12 +166,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="obj\Debug\CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\moby_bot.csprojResolveAssemblyReference.cache" />
+    <Content Include="bin\Bot Application.dll.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -137,7 +189,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
