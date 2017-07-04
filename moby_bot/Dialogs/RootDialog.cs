@@ -5,6 +5,7 @@ using Microsoft.Bot.Connector;
 using System.Threading;
 using Newtonsoft.Json;
 using AdaptiveCards;
+using System.Collections.Generic;
 
 namespace moby_bot.Dialogs
 {
@@ -30,21 +31,18 @@ namespace moby_bot.Dialogs
             await context.PostAsync(QnaAnswer.Substring(2, QnaAnswer.Length - 2));
 
             //Test Adaptive Card
-            var card = new AdaptiveCard();
-            card.Body.Add(new TextBlock()
+            var heroCard = new HeroCard
             {
-                Text = "Would you like me to help you allocate this transaction to the right account.",
-            });
-
-            var json = JsonConvert.SerializeObject(card);
-
-            Activity replyToConversation = activity.CreateReply("Card");
-            // Create the attachment.
-            Attachment attachment = new Attachment()
-            {
-                ContentType = AdaptiveCard.ContentType,
-                Content = card
+                Title = "BotFramework Hero Card",
+                Subtitle = "Your bots — wherever your users are talking",
+                Text = "Build and connect intelligent bots to interact with your users naturally wherever they are, from text/sms to Skype, Slack, Office 365 mail and other popular services.",
+                Images = new List<CardImage> { new CardImage("https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg") },
+                Buttons = new List<CardAction> { new CardAction(ActionTypes.OpenUrl, "Get Started", value: "https://docs.microsoft.com/bot-framework") }
             };
+
+            Activity replyToConversation = activity.CreateReply();
+            // Create the attachment.
+            Attachment attachment = heroCard.ToAttachment();
             replyToConversation.Attachments.Add(attachment);
             await context.PostAsync(replyToConversation);
             //-----------------------------------------------------
