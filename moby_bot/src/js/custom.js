@@ -25,7 +25,7 @@ $(document).ready(function () {
 
                 setTimeout(function () {
                     new Audio(s12).play();
-                }, 7000)
+                }, 7100)
                 scenario = 13;
 
             }

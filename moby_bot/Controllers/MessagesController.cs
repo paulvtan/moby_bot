@@ -46,6 +46,7 @@ namespace moby_bot
                 // Handle conversation state changes, like members being added and removed
                 // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
                 // Not available in all channels
+
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
