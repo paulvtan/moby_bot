@@ -7,7 +7,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 
 .wc-app button {
     background-color: #0063b1;
-    /*border: 1px solid #cccccc;*/
+    border: 1px solid #eceff1;
     border-radius: 1px;
     color: #ffffff;
     cursor: pointer;
