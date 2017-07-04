@@ -19,8 +19,9 @@ namespace moby_bot
         /// Receive a message from a user and reply to it
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+
         {
-            if (activity.Type == ActivityTypes.Message)
+            if (activity.Type == ActivityTypes.Message || activity.Type == "invoke")
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
 
