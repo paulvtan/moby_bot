@@ -33,7 +33,7 @@ namespace moby_bot.Dialogs
             switch (scenarioCode)
             {
                 case "11":
-                    Thread.Sleep(3500);
+                    Thread.Sleep(3000);
                     await context.PostAsync("Would you like me to help you allocate this transaction to the right account?");
                     break;
             }
