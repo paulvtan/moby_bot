@@ -1,5 +1,5 @@
 //Variable List
-var voice_delay = 3200;
+var voice_delay = 3500;
 var s11 = "sounds/11.mp3";
 var s12 = "sounds/12.mp3";
 var s13 = "sounds/13.mp3";
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
                 setTimeout(function () {
                     new Audio(s12).play();
-                }, 6700)
+                }, 7000)
                 scenario = 13;
 
             }

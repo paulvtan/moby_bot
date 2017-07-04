@@ -23,6 +23,14 @@ namespace moby_bot.Dialogs
         {
             var activity = await result as Activity;
 
+            //Transform Yes to scenario code
+            switch (activity.Text)
+            {
+                case " Yes":
+                    activity.Text = "+12";
+                    break;
+            }
+
             //Call GetQnaReply to get the result
             QnAMakerResult qnaMakeReply = QnaMaker.GetQnaReply(activity);
             string qnaAnswer = qnaMakeReply.Answer;
@@ -42,7 +50,7 @@ namespace moby_bot.Dialogs
             {
                 case "11":
                     Thread.Sleep(3000);
-                    replyToUser = createCardActivity(activity, "Yes", "No", "Would you like me to help you allocate this transaction to the right account?", 12);
+                    replyToUser = createCardActivity(activity, " Yes", "No", "Would you like me to help you allocate this transaction to the right account?", 12);
                     await context.PostAsync(replyToUser);
                     break;
 
@@ -62,7 +70,7 @@ namespace moby_bot.Dialogs
             var heroCard = new HeroCard
             {
                 Text = text,
-                Buttons = new List<CardAction> { new CardAction("imBack", choice1, value: " Yes"), new CardAction("invoke", choice2, value: "-" + scenarioNo) }
+                Buttons = new List<CardAction> { new CardAction("imBack", choice1, value: choice1), new CardAction("imBack", choice2, value: choice2) }
             };
             Activity replyToConversation = activity.CreateReply();
             // Create the attachment.
