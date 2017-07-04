@@ -25,6 +25,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     new Audio(s11).play();
                 }, 3500);
+            }
                 //----------
 
                 //Scenario 2
