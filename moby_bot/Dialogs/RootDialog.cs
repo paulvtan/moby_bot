@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System.Threading;
 
 namespace moby_bot.Dialogs
 {
@@ -28,11 +29,12 @@ namespace moby_bot.Dialogs
 
 
             //2nd Level Reply
+            int delay = 5000;
             string scenarioCode = QnaAnswer.Substring(0, 2);
-
             switch (scenarioCode)
             {
                 case "11":
+                    Thread.Sleep(delay);
                     await context.PostAsync("Would you like me to help you allocate this transaction to the right account?");
                     break;
             }

@@ -18,6 +18,11 @@ $(document).ready(function () {
                         new Audio(s12).play();
                     }, 3500);
                 }
+                //----------
+
+                //Scenario 2
+                //----------
+
             }, voice_delay);
 
         }
