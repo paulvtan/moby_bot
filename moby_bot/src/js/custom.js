@@ -12,15 +12,6 @@ $(document).ready(function () {
             var user_command = $("#user-text").val().toLowerCase();
 
             //Scenario 1
-            //setTimeout(function () {
-            //    new Audio(s11).play();
-            //    if (user_command.includes("hi")) {
-            //        setTimeout(function () {
-            //            new Audio(s12).play();
-            //        }, 3500);
-            //    }
-            //}, voice_delay);
-
             if (user_command.includes("hi")) {
                 setTimeout(function () {
                     new Audio(s11).play();
@@ -29,6 +20,7 @@ $(document).ready(function () {
                 setTimeout(function () {
                     new Audio(s12).play();
                 }, 6700)
+                scenario = 13;
             }
             //----------
 
@@ -37,6 +29,8 @@ $(document).ready(function () {
 
 
         }
+
+    $()
     });
 
 
