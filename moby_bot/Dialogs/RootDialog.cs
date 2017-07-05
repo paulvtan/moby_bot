@@ -75,11 +75,12 @@ namespace moby_bot.Dialogs
                 case "21":
                     System.Threading.Thread.Sleep(2500);
                     await context.PostAsync("You usually sell 30% more coffee on rainy days than usual, but it looks like stocks are running low.");
-                    System.Threading.Thread.Sleep(5000);
+                    System.Threading.Thread.Sleep(4500);
                     replyToUser = createCardActivity(activity, " Yes ", "No", "Would you like me to order 5 more bags of coffee beans for tomorrow morning?", 13);
                     await context.PostAsync(replyToUser);
                     break;
                 case "24":
+                    System.Threading.Thread.Sleep(6000);
                     replyToUser = createCardActivity(activity, "Call", "Dismiss", "It looks like you usually need 3 workers on shift on a rainy day, but there's only 2 on shift tomorrow. Carol is available tomorrow, would you like to call her in?", 13);
                     await context.PostAsync(replyToUser);
                     break;

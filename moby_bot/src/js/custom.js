@@ -11,6 +11,9 @@ var s17 = "sounds/17.mp3";
 var s21 = "sounds/21.mp3";
 var s22 = "sounds/22.mp3";
 var s23 = "sounds/23.mp3";
+var s24 = "sounds/24.mp3";
+var s25 = "sounds/25.mp3";
+var s26 = "sounds/26.mp3";
 
 $(document).ready(function () {
 
