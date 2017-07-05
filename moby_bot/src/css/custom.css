@@ -10,7 +10,7 @@
 
 /*Dashboard CSS Start*/
 body:not(#chat) {
-    background: #F1F3FA;
+    background: hsl(316, 31%, 93%);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,6 +24,7 @@ body:not(#chat) {
     padding: 20px 0 10px 0;
     background: #fff;
     border-radius: 30px;
+    box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.2);
 }
 
 .profile-userpic img {
@@ -198,10 +199,11 @@ h5 {
     font-size: 1em;
     overflow: hidden;
     padding: 0;
-    border: none;
     border-radius: 20px;
     /*box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;*/
 }
+
+
 
 .card-block {
     font-size: 1em;

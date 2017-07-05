@@ -67,21 +67,32 @@ $(document).ready(function () {
 
             //Scenario 2
             if (user_command.includes("hello")) {
-                $("#s1_container").hide();
-                $("#s2_container").show();
+                $("#s1_container").fadeOut(1000);
+                setTimeout(function () {
+                    $("#s2_container").show();
+                }, 1500);
                 setTimeout(function () {
                     new Audio(s21).play(); //Play s21 voice
                     setTimeout(function () {
                         new Audio(s22).play(); //Play s22 voice
+                        $("#r2").effect("slide", "slow"); //Fade in the row1
+                        setTimeout(function () {
+                            $("#barchart").fadeIn(4000); //remaining stock chart
+                            $("#stockremain").fadeIn(4000);
+                            setTimeout(function () {
+                                $("#saleincrease").effect("slide");
+                            }, 2000);
+                        }, 2000);
                         setTimeout(function () {
                             new Audio(s23).play(); //Play s23 voice
+                            scenario = 24;
                         }, 7000);
                     }, 5000);
                 }, voice_delay);
                 setTimeout(function () {
-                    $("#r1").fadeIn(2000); //Fade in the row1
+                    $("#r1").effect("slide", "slow"); //Fade in the row1
                 }, 1500);
-                scenario = 24;
+                
 
             }
             //----------
@@ -118,12 +129,23 @@ $(document).ready(function () {
             }, voice_delay)
             $('#s1_new_transaction_alert1').hide();
             scenario = 0;
-        } else if (scenario = 24) {
-            new Audio(s26).play();
-            scenario = 26;
-            alert(scenario);
+        } else if (scenario == 24) {
+            setTimeout(function () {
+                $("#r4").fadeIn(1000); //Row 4 fly in
+                new Audio(s24).play();
+                setTimeout(function () {
+                    new Audio(s25).play();
+                    $("#r5").fadeIn(2000);
+                }, 9000)
+            }, voice_delay)
+            scenario = 26
+        } else if (scenario == 26) {
+            setTimeout(function () {
+                new Audio(s26).play();
+            }, 1000)
+            scenario = 27;
             
-        } 
+        }
 
 
     });

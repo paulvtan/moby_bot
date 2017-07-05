@@ -112,7 +112,14 @@
     <Content Include="images\business_owner.PNG" />
     <Content Include="images\dashboard.PNG" />
     <Content Include="images\datecard.png" />
+    <Content Include="images\graph.gif" />
+    <Content Include="images\graph.PNG" />
     <Content Include="images\moby.png" />
+    <Content Include="images\personadd.png" />
+    <Content Include="images\piechart.gif" />
+    <Content Include="images\user.ico" />
+    <Content Include="images\waiter1.PNG" />
+    <Content Include="images\waiter2.PNG" />
     <Content Include="images\weathercard.png" />
     <Content Include="sounds\11.mp3" />
     <Content Include="sounds\12.mp3" />
