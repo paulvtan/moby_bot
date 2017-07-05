@@ -53,7 +53,7 @@ namespace moby_bot.Dialogs
             {
                 case "11":
                     Thread.Sleep(3000);
-                    replyToUser = createCardActivity(activity, " Yes", "No", "Would you like me to help allocate this transaction to the right account?", 12);
+                    replyToUser = createCardActivity(activity, " Yes", "No", "Would you like me to help you allocate this transaction to the right account?", 12);
                     await context.PostAsync(replyToUser);
                     break;
 
