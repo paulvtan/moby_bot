@@ -70,7 +70,7 @@ $(document).ready(function () {
                     new Audio(s21).play(); //Play s21 voice
                 }, voice_delay);
                 setTimeout(function () {
-                    $("#r1").fadeIn(1000); //Fade in the transaction_table1
+                    $("#r1").fadeIn(2000); //Fade in the transaction_table1
                 }, 1500);
 
             }
