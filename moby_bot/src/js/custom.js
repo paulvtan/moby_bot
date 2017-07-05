@@ -9,8 +9,8 @@ var s16 = "sounds/16.mp3";
 var s17 = "sounds/17.mp3";
 
 var s21 = "sounds/21.mp3";
-
-
+var s22 = "sounds/22.mp3";
+var s23 = "sounds/23.mp3";
 
 $(document).ready(function () {
 
@@ -68,6 +68,12 @@ $(document).ready(function () {
                 $("#s2_container").show();
                 setTimeout(function () {
                     new Audio(s21).play(); //Play s21 voice
+                    setTimeout(function () {
+                        new Audio(s22).play(); //Play s22 voice
+                        setTimeout(function () {
+                            new Audio(s23).play(); //Play s23 voice
+                        }, 7000);
+                    },  5000);
                 }, voice_delay);
                 setTimeout(function () {
                     $("#r1").fadeIn(2000); //Fade in the transaction_table1
