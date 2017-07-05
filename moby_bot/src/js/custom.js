@@ -29,7 +29,7 @@ $(document).ready(function () {
                     //-------
                 }, voice_delay);
 
-            } else if (user_command.includes("2") {
+            } else if (user_command.includes("2")) {
                 setTimeout(function () {
                     new Audio(s15).play();
                 }, voice_delay);
