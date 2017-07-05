@@ -29,6 +29,9 @@ namespace moby_bot.Dialogs
                 case " Yes":
                     activity.Text = "+12";
                     break;
+                case "Yes ":
+                    activity.Text = "+16";
+                    break;
             }
 
             //Call GetQnaReply to get the result

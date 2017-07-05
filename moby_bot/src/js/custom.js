@@ -39,6 +39,7 @@ $(document).ready(function () {
                     new Audio(s16).play();
                 }, voice_delay);
                 scenario = 17;
+            }
 
             //----------
 
@@ -63,7 +64,13 @@ $(document).ready(function () {
                 new Audio(s14).play();
             }, voice_delay)
             scenario = 15;
-        } 
+        } else if
+         (scenario == 17) {
+            setTimeout(function () {
+                new Audio(s17).play();
+            }, voice_delay)
+            scenario = 0;
+        }  
 
 
     });
