@@ -111,7 +111,9 @@
     <Content Include="Global.asax" />
     <Content Include="images\business_owner.PNG" />
     <Content Include="images\dashboard.PNG" />
+    <Content Include="images\datecard.png" />
     <Content Include="images\moby.png" />
+    <Content Include="images\weathercard.png" />
     <Content Include="sounds\11.mp3" />
     <Content Include="sounds\12.mp3" />
     <Content Include="sounds\13.mp3" />
@@ -119,6 +121,7 @@
     <Content Include="sounds\15.mp3" />
     <Content Include="sounds\16.mp3" />
     <Content Include="sounds\17.mp3" />
+    <Content Include="sounds\21.mp3" />
     <Content Include="sounds\test_sound.mp3" />
     <Content Include="src\css\bootstrap-theme.css" />
     <Content Include="src\css\bootstrap-theme.min.css" />

@@ -8,6 +8,8 @@ var s15 = "sounds/15.mp3";
 var s16 = "sounds/16.mp3";
 var s17 = "sounds/17.mp3";
 
+var s21 = "sounds/21.mp3";
+
 
 
 $(document).ready(function () {
@@ -61,6 +63,17 @@ $(document).ready(function () {
             //----------
 
             //Scenario 2
+            if (user_command.includes("hello")) {
+                $("#s1_container").hide();
+                $("#s2_container").show();
+                setTimeout(function () {
+                    new Audio(s21).play(); //Play s21 voice
+                }, voice_delay);
+                setTimeout(function () {
+                    $("#r1").fadeIn(1000); //Fade in the transaction_table1
+                }, 1500);
+
+            }
             //----------
 
 
