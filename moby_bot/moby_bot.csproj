@@ -113,7 +113,6 @@
     <Content Include="images\dashboard.PNG" />
     <Content Include="images\moby.png" />
     <Content Include="sounds\11.mp3" />
-    <Content Include="sounds\12.mp3" />
     <Content Include="sounds\13.mp3" />
     <Content Include="sounds\14.mp3" />
     <Content Include="sounds\15.mp3" />
