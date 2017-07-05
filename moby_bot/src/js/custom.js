@@ -33,7 +33,13 @@ $(document).ready(function () {
                 setTimeout(function () {
                     new Audio(s15).play();
                 }, voice_delay);
-            }
+                scenario = 16;
+            } else if (user_command.includes("electricity")) {
+                setTimeout(function () {
+                    new Audio(s16).play();
+                }, voice_delay);
+                scenario = 17;
+
             //----------
 
             //Scenario 2
