@@ -14,6 +14,7 @@ var s23 = "sounds/23.mp3";
 var s24 = "sounds/24.mp3";
 var s25 = "sounds/25.mp3";
 var s26 = "sounds/26.mp3";
+var s27 = "sounds/27.mp3";
 
 $(document).ready(function () {
 
@@ -119,9 +120,16 @@ $(document).ready(function () {
             $('#s1_new_transaction_alert1').hide();
             scenario = 0;
         } else if (scenario = 24) {
+            scenario = 26;
             setTimeout(function () {
                 new Audio(s24).play();
-            }, voice_delay);
+                setTimeout(function () {
+                    new Audio(s25).play(); //Nested voice
+                }, 9000);
+            }, 3000);
+        } else if (scenario = 26) {
+            new Audio(s27).play();
+            scenario = 27;
         }
 
 
