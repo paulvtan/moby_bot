@@ -15,19 +15,30 @@ $(document).ready(function () {
     //This function plays a moby voice feedback.
     $("#user-text").keypress(function (e) {
         if (e.which == 13) {
+
             var user_command = $("#user-text").val().toLowerCase();
 
             //Scenario 1
             if (user_command.includes("hi")) {
+                $("#new_transaction_alert").fadeIn(500);
                 setTimeout(function () {
                     new Audio(s11).play();
+                    $("#summary_screen").fadeOut(1000); //Fade the Summary Screen Out
                     //Nested
                     setTimeout(function () {
                         new Audio(s12).play();
                     }, 4000) //Initial Delay
                     scenario = 13;
+                    setTimeout(function () {
+                        $("#transaction_table1").fadeIn(1000); //Fade in the transaction_table1
+                    }, 1500) 
+
+
                     //-------
                 }, voice_delay);
+
+
+
 
             } else if (user_command.includes("2")) {
                 setTimeout(function () {
@@ -70,7 +81,7 @@ $(document).ready(function () {
                 new Audio(s17).play();
             }, voice_delay)
             scenario = 0;
-        }  
+        }
 
 
     });

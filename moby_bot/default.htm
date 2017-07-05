@@ -17,6 +17,7 @@
 
     <!-- CSS References -->
     <link href="src/css/botchat.css" rel="stylesheet" />
+    <link href="src/css/sweetalert2.css" rel="stylesheet" />
     <!-- Boostrap -->
     <link href="src/css/bootstrap.min.css" rel="stylesheet">
     <link href="src/css/custom.css" rel="stylesheet">
@@ -28,6 +29,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/js/bootstrap.min.js"></script>
     <script src="src/js/custom.js"></script>
+    <script src="src/js/sweetalert2.js"></script>
 
     <style>
         .wc-chatview-panel {
@@ -44,12 +46,6 @@
         <img src="images/moby.png" alt="Moby Logo" style="width: 15%; height: 15%;" />
         <h3 style="margin-top: -50px; font-family: 'Montserrat', sans-serif;">Business Management Made Simple</h3>
     </div>
-
-    <!-- Chat box for Moby -->
-    <!--<div>
-        <div style="margin-left: 100px; margin-top: 80px" id="BotChatGoesHere"></div>
-        <div style="clear:both;"></div>
-    </div>-->
 
     <!-- The 3 panels -->
     <div class="container">
@@ -68,10 +64,95 @@
                 <div class="profile-content">
                     <!-- ############################CONTENTS############################## -->
 
+                    <!-- Summary Screen Image -->
+                    <div id="new_transaction_alert" class="alert alert-info alert-dismissible" role="alert" style="display:none; margin-bottom: -10px;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span><strong> 1 x New transaction!</strong>
+                    </div>
                     <img id="summary_screen" src="images/dashboard.PNG" style="width: 100%; margin-top: 50px;"/>
-
-
-
+                    <!-- Transaction Table -->
+                    <div id="transaction_table1" class="col-md-12" style="display:none">
+                        <div class="row">
+                            <div class="panel panel-primary filterable" style="border-color:#7710a0;">
+                                <div class="panel-heading"  style="background-color: #7710a0; border-color:#7710a0;">
+                                    <h3 class="panel-title">Transactions <span class="glyphicon glyphicon-tag" aria-hidden="true"></span></h3>
+                                    <div class="pull-right">
+                                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="filters">
+                                            <th><input type="text" class="form-control" placeholder="Date" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Account" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Description" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Withdrawn" disabled></th>
+                                            <th><input type="text" class="form-control" placeholder="Deposite" disabled></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>02/01/2017</td>
+                                            <td><b>Cheque</b></td>
+                                            <td>Transfer</td>
+                                            <td>-335.24 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/01/2017</td>
+                                            <td><b>Electricity</b></td>
+                                            <td>Gas bill</td>
+                                            <td>-256.40 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12/02/2017</td>
+                                            <td><b>Saving</b></td>
+                                            <td>Income</td>
+                                            <td></td>
+                                            <td>3426.55 <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="color: #0ACD3D"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>07/03/2017</td>
+                                            <td><b>Insurance</b></td>
+                                            <td>annual fee</td>
+                                            <td>-456.20 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>26/05/2017</td>
+                                            <td><b>Internet</b></td>
+                                            <td>Monthly fee</td>
+                                            <td>-499.99 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15/06/2017</td>
+                                            <td><b>Equipment</b></td>
+                                            <td>annual fee</td>
+                                            <td>-759.65 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>16/06/2017</td>
+                                            <td><b>Cheque</b></td>
+                                            <td>Direct Payment</td>
+                                            <td></td>
+                                            <td>356.56 <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" style="color: #0ACD3D"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01/07/2017</td>
+                                            <td><b>Supplies</b></td>
+                                            <td>Goods Purchased</td>
+                                            <td>-400.00 <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="color: red"></span></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table -->
 
                     <!-- ############################CONTENTS############################## -->
                 </div>
