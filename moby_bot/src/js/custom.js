@@ -28,6 +28,10 @@ $(document).ready(function () {
                 }, 7100)
                 scenario = 13;
 
+            } else if (user_command.includes("2") {
+                setTimeout(function () {
+                    new Audio(s15).play();
+                }, voice_delay);
             }
             //----------
 
@@ -51,8 +55,8 @@ $(document).ready(function () {
             setTimeout(function () {
                 new Audio(s14).play();
             }, voice_delay)
-            scenario = 1;
-        }
+            scenario = 15;
+        } 
 
 
     });
