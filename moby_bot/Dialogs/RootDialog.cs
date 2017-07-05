@@ -63,7 +63,7 @@ namespace moby_bot.Dialogs
                     break;
 
                 case "16":
-                    replyToUser = createCardActivity(activity, "Yes ", "No", "Sounds like this is an 'Electricity & Gas' expense. Would you like me to allocate this transaction to the 'Electricity & Gas' expense account?", 13);
+                    replyToUser = createCardActivity(activity, "Yes ", "No", "Sounds like this is an 'Electricity & Gas' expense.\n Would you like me to allocate this transaction to the 'Electricity & Gas' expense account?", 13);
                     await context.PostAsync(replyToUser);
                     break;
             }
