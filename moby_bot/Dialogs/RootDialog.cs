@@ -70,6 +70,8 @@ namespace moby_bot.Dialogs
                     System.Threading.Thread.Sleep(3500);
                     await context.PostAsync("You usually sell 30% more coffee on rainy days than usual, but it looks like stocks are running low.");
                     System.Threading.Thread.Sleep(3500);
+                    replyToUser = createCardActivity(activity, " Yes ", "No", "Would you like me to order 5 more bags coffee beans for tomorrow morning?", 13);
+                    await context.PostAsync(replyToUser);
                     break;
             }
 
