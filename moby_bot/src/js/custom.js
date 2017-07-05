@@ -24,7 +24,7 @@ $(document).ready(function () {
                     //Nested
                     setTimeout(function () {
                         new Audio(s12).play();
-                    }, voice_delay)
+                    }, 4000) //Initial Delay
                     scenario = 13;
                     //-------
                 }, voice_delay);

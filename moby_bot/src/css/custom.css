@@ -22,7 +22,7 @@ body:not(#chat) {
 .profile-sidebar {
     padding: 20px 0 10px 0;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .profile-userpic img {
