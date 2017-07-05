@@ -110,6 +110,7 @@
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
     <Content Include="images\business_owner.PNG" />
+    <Content Include="images\dashboard.PNG" />
     <Content Include="images\moby.png" />
     <Content Include="sounds\11.mp3" />
     <Content Include="sounds\12.mp3" />
