@@ -115,7 +115,6 @@
     <Content Include="sounds\14.mp3" />
     <Content Include="sounds\15.mp3" />
     <Content Include="sounds\16.mp3" />
-    <Content Include="sounds\17.mp3" />
     <Content Include="src\css\bootstrap-theme.css" />
     <Content Include="src\css\bootstrap-theme.min.css" />
     <Content Include="src\css\bootstrap.css" />
