@@ -168,6 +168,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 
 /* views */
 .wc-chatview-panel {
+    background-color: white;
     overflow: hidden;
     position: absolute;
     right: 0;

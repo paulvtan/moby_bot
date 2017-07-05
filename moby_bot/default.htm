@@ -11,6 +11,7 @@
 
     <!-- Google Fonts Reference -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 
 
@@ -29,25 +30,104 @@
     <script src="src/js/custom.js"></script>
 
     <style>
-
         .wc-chatview-panel {
             width: 390px;
             height: 570px;
             position: relative;
+            background-color: white;
         }
     </style>
 </head>
 <body>
-
-    <!-- Chat box for Moby -->
-    <div>
-        <div style="margin-left: 100px; margin-top: 100px" id="BotChatGoesHere" ></div>
-        <div style="clear:both;" ></div>
+    <!-- Moby Logo -->
+    <div style="text-align: center; margin-top: -50px; margin-bottom: -50px;">
+        <img src="images/moby.png" alt="Moby Logo" style="width: 15%; height: 15%;" />
+        <h3 style="margin-top: -50px; font-family: 'Montserrat', sans-serif;">Business Management Made Simple</h3>
     </div>
 
+    <!-- Chat box for Moby -->
+    <!--<div>
+        <div style="margin-left: 100px; margin-top: 80px" id="BotChatGoesHere"></div>
+        <div style="clear:both;"></div>
+    </div>-->
+
+    <!-- The 3 panels -->
+    <div class="container">
+        <div class="row profile">
+
+            <!-- Chat box for Moby -->
+            <div id="chat" class="col-md-3" style="margin-top: 80px; margin-left: -100px">
+                <div  id="BotChatGoesHere"></div>
+                <div style="clear:both;"></div>
+            </div>
+            <!-- Chat box end -->
+
+
+            <!-- Dashboard start -->
+            <div style="margin-top: 80px; margin-left: 150px;" class="col-md-6">
+                <div class="profile-content">
+                    Some user related content goes here...
+                </div>
+            </div>
+            <!-- Dashboard end -->
+
+            <!--User Profile Start-->
+            <div class="col-md-2" style="margin-top: 80px;">
+                <div class="profile-sidebar">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <img src="images/business_owner.PNG" class="img-responsive" alt="Henry image">
+                    </div>
+
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            John
+                        </div>
+                        <div class="profile-usertitle-job">
+                            <div><i style="color: #0ACD3D;" class="glyphicon glyphicon-one-fine-dot"></i> Online</div>
+                        </div>
+                    </div>
+                    <!-- END SIDEBAR USER TITLE -->
+                    <!-- SIDEBAR MENU -->
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li class="sidebar">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+                                    Tasks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    Points
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END MENU -->
+                </div>
+            </div>
+
+
+            <!-- User Profile END-->
+
+
+        </div>
+    </div>
+
+    <!-- end test -->
     <!-- Directline Chat Box Script -->
     <script>
-        
+
         BotChat.App({
             directLine: {
                 token: "SuDX2QK14Hw.cwA.g_c.iLNHsOY0ZjLiVzjPbXMiqhGq2bJxVuJvc-RbhFMF__M"
@@ -61,4 +141,5 @@
 
     </script>
 </body>
+
 </html>
