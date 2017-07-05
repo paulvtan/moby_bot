@@ -127,7 +127,6 @@
     <Content Include="sounds\24.mp3" />
     <Content Include="sounds\25.mp3" />
     <Content Include="sounds\26.mp3" />
-    <Content Include="sounds\27.mp3" />
     <Content Include="sounds\test_sound.mp3" />
     <Content Include="src\css\bootstrap-theme.css" />
     <Content Include="src\css\bootstrap-theme.min.css" />
