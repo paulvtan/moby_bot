@@ -45,7 +45,7 @@
 </head>
 <body>
     <!-- Moby Logo -->
-    <div id="moby_logo" style="text-align: center; margin-top: -50px; margin-bottom: -50px;">
+    <div id="moby_logo" style="text-align: center; margin-top: -50px; margin-bottom: -90px;">
         <img src="images/moby.png" alt="Moby Logo" style="width: 15%; height: 15%;" />
         <h3 style="margin-top: -50px; font-family: 'Montserrat', sans-serif;">Business Management Made Simple</h3>
     </div>
@@ -231,6 +231,9 @@
         </div>
     </div>
 
+    <div id="debugger">
+        <p><button class="btn btn-default btn-circle" style=" margin-top: 20px; margin-left: 50px; margin-bottom: 5px;" onclick="clear_chat()">x</button> Clear <button class="btn btn-default btn-circle" style=" margin-top: 20px; margin-left: 50px; margin-bottom: 5px;" onclick="test_sound()"><i class="glyphicon glyphicon-volume-up"></i></button> Test <button class="btn btn-default btn-circle" style=" margin-top: 20px; margin-left: 50px; margin-bottom: 5px;" onclick="hide_debugger()">-</button></p>
+    </div>
     <!-- end test -->
     <!-- Directline Chat Box Script -->
     <script>
@@ -242,6 +245,23 @@
             user: { id: 'John' },
             bot: { id: 'yourbot' },
         }, document.getElementById("BotChatGoesHere"));
+
+        //This function clear all messages in the chat box
+        function clear_chat() {
+            jQuery('.wc-message-group-content div').html('');
+        }
+
+
+        //This function test the volume of Moby 
+        function test_sound() {
+            var testSound = "sounds/test_sound.mp3";
+            new Audio(testSound).play();
+        }
+
+        //This function remove the debugger
+        function hide_debugger() {
+            jQuery('#debugger').html('');
+        }
 
     </script>
 </body>

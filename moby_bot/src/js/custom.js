@@ -9,7 +9,10 @@ var s16 = "sounds/16.mp3";
 var s17 = "sounds/17.mp3";
 
 
+
 $(document).ready(function () {
+
+
 
     var scenario = 0;
     //This function plays a moby voice feedback.
