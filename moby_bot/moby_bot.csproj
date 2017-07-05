@@ -125,12 +125,16 @@
     <Content Include="src\css\bootstrap.min.css" />
     <Content Include="src\css\botchat.css" />
     <Content Include="src\css\custom.css" />
+    <Content Include="src\css\jquery-ui.css" />
+    <Content Include="src\css\jquery-ui.theme.css" />
     <Content Include="src\css\sweetalert2.css" />
     <Content Include="src\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="src\js\bootstrap.js" />
     <Content Include="src\js\bootstrap.min.js" />
     <Content Include="src\js\botchat.js" />
     <Content Include="src\js\custom.js" />
+    <Content Include="src\js\jquery-ui.js" />
+    <Content Include="src\js\jquery.js" />
     <Content Include="src\js\npm.js" />
     <Content Include="src\js\sweetalert2.js" />
     <Content Include="Web.config">

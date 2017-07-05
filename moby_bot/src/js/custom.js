@@ -20,7 +20,7 @@ $(document).ready(function () {
 
             //Scenario 1
             if (user_command.includes("hi")) {
-                $("#new_transaction_alert").fadeIn(500);
+                $("#s1_new_transaction_alert1").fadeIn(500);
                 setTimeout(function () {
                     new Audio(s11).play();
                     $("#summary_screen").fadeOut(1000); //Fade the Summary Screen Out
@@ -31,7 +31,7 @@ $(document).ready(function () {
                     scenario = 13;
                     setTimeout(function () {
                         $("#transaction_table1").fadeIn(1000); //Fade in the transaction_table1
-                    }, 1500) 
+                    }, 1500)
 
 
                     //-------
@@ -48,6 +48,9 @@ $(document).ready(function () {
             } else if (user_command.includes("electricity")) {
                 setTimeout(function () {
                     new Audio(s16).play();
+                    $("#s1_description1").hide();
+                    $("#s1_description2").fadeIn(5000);
+                    $("#s1_expense_tag").hide();
                 }, voice_delay);
                 scenario = 17;
             }
@@ -69,17 +72,25 @@ $(document).ready(function () {
                 new Audio(s13).play();
             }, voice_delay)
             scenario = 14;
+
         } else if
          (scenario == 14) {
             setTimeout(function () {
                 new Audio(s14).play();
             }, voice_delay)
             scenario = 15;
+            $("#s1_expense_tag").fadeIn(1000);
         } else if
-         (scenario == 17) {
+        (scenario == 17) {
+            $("#s1_account1").hide();
+            $("#s1_account2").fadeIn(5000);
             setTimeout(function () {
                 new Audio(s17).play();
+                $('#s1_transaction_row').animate({ backgroundColor: '#DEF0D8' }, 'slow');
+                $("#s1_date").text("07/07/2017");
+                $("#s1_new_transaction_alert2").show();
             }, voice_delay)
+            $('#s1_new_transaction_alert1').hide();
             scenario = 0;
         }
 
