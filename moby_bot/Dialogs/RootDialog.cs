@@ -32,6 +32,12 @@ namespace moby_bot.Dialogs
                 case "Yes ":
                     activity.Text = "+16";
                     break;
+                case " Yes ":
+                    activity.Text = "+23";
+                    break;
+                case "Call":
+                    activity.Text = "+25";
+                    break;
             }
 
             //Call GetQnaReply to get the result
@@ -67,10 +73,14 @@ namespace moby_bot.Dialogs
                     await context.PostAsync(replyToUser);
                     break;
                 case "21":
-                    System.Threading.Thread.Sleep(3500);
+                    System.Threading.Thread.Sleep(2000);
                     await context.PostAsync("You usually sell 30% more coffee on rainy days than usual, but it looks like stocks are running low.");
-                    System.Threading.Thread.Sleep(3500);
+                    System.Threading.Thread.Sleep(2000);
                     replyToUser = createCardActivity(activity, " Yes ", "No", "Would you like me to order 5 more bags coffee beans for tomorrow morning?", 13);
+                    await context.PostAsync(replyToUser);
+                    break;
+                case "24":
+                    replyToUser = createCardActivity(activity, "Call", "Dismiss", "It looks like you usually need 3 workers on shift on a rainy day, but there's only 2 on shift tomorrow. Carol is available tomorrow, would you like to call her in?", 13);
                     await context.PostAsync(replyToUser);
                     break;
             }
