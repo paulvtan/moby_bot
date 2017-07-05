@@ -76,8 +76,9 @@ $(document).ready(function () {
                     },  5000);
                 }, voice_delay);
                 setTimeout(function () {
-                    $("#r1").fadeIn(2000); //Fade in the transaction_table1
+                    $("#r1").fadeIn(2000); //Fade in the row1
                 }, 1500);
+                scenario = 24;
 
             }
             //----------
@@ -114,6 +115,10 @@ $(document).ready(function () {
             }, voice_delay)
             $('#s1_new_transaction_alert1').hide();
             scenario = 0;
+        } else if (scenario = 24) {
+            setTimeout(function () {
+                new Audio(s24).play();
+            }, voice_delay);
         }
 
 
