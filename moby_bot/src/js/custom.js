@@ -21,12 +21,13 @@ $(document).ready(function () {
             if (user_command.includes("hi")) {
                 setTimeout(function () {
                     new Audio(s11).play();
+                    //Nested
+                    setTimeout(function () {
+                        new Audio(s12).play();
+                    }, voice_delay)
+                    scenario = 13;
+                    //-------
                 }, voice_delay);
-
-                setTimeout(function () {
-                    new Audio(s12).play();
-                }, 7100)
-                scenario = 13;
 
             } else if (user_command.includes("2") {
                 setTimeout(function () {
