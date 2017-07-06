@@ -120,6 +120,7 @@
     <Content Include="images\user.ico" />
     <Content Include="images\waiter1.PNG" />
     <Content Include="images\waiter2.PNG" />
+    <Content Include="images\waitress3.png" />
     <Content Include="images\weathercard.png" />
     <Content Include="sounds\11.mp3" />
     <Content Include="sounds\12.mp3" />

@@ -142,8 +142,20 @@ $(document).ready(function () {
         } else if (scenario == 26) {
             setTimeout(function () {
                 new Audio(s26).play();
-            }, 1000)
+            }, 2000)
             scenario = 27;
+            setTimeout(function () {
+                swal({
+                    text: 'Calling Carol...',
+                    imageUrl: 'images/waitress3.png',
+                    imageWidth: 200,
+                    imageHeight: 200,
+                    animation: true,
+                    showConfirmButton: false,
+                    showCancelButton: true,
+                    cancelButtonColor: "#FF0000",
+                })
+            }, 6000)
             
         }
 
