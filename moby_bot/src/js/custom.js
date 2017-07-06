@@ -27,8 +27,7 @@ $(document).ready(function () {
             var user_command = $("#user-text").val().toLowerCase();
 
             //Scenario 1
-            if (user_command.includes("hi")) {
-                $("#s1_new_transaction_alert1").fadeIn(500);
+            if (user_command.includes("what")) {
                 setTimeout(function () {
                     new Audio(s11).play();
                     $("#summary_screen").fadeOut(1000); //Fade the Summary Screen Out
@@ -39,6 +38,7 @@ $(document).ready(function () {
                     scenario = 13;
                     setTimeout(function () {
                         $("#transaction_table1").fadeIn(1000); //Fade in the transaction_table1
+                    $("#s1_new_transaction_alert1").fadeIn(4000);
                     }, 1500)
 
 
