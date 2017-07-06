@@ -117,6 +117,7 @@
     <Content Include="images\moby.png" />
     <Content Include="images\personadd.png" />
     <Content Include="images\piechart.gif" />
+    <Content Include="images\resupply.PNG" />
     <Content Include="images\user.ico" />
     <Content Include="images\waiter1.PNG" />
     <Content Include="images\waiter2.PNG" />

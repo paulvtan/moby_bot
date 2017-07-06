@@ -17,6 +17,11 @@ var s26 = "sounds/26.mp3";
 
 $(document).ready(function () {
 
+    //Auto Scroll
+    window.setInterval(function () {
+        var elem = document.getElementById('s2_container');
+        elem.scrollTop = elem.scrollHeight;
+    }, 500);
 
 
     var scenario = 0;
@@ -149,16 +154,23 @@ $(document).ready(function () {
             scenario = 27;
             setTimeout(function () {
                 swal({
-                    text: 'Calling Carol...',
+                    title: 'Calling Carol...',
                     imageUrl: 'images/waitress3.png',
                     imageWidth: 200,
                     imageHeight: 200,
                     animation: true,
                     showConfirmButton: false,
                     showCancelButton: true,
-                    cancelButtonColor: "#FF0000",
+                    cancelButtonColor: "#FF0000"
                 })
-            }, 6000)
+                setTimeout(function () {
+                    swal(
+                        'Request Accepted',
+                        'Carol has been assigned for tomorrow roster',
+                        'success'
+                    )
+                }, 3000)
+            }, 5000)
             
         }
 
