@@ -2,9 +2,12 @@
     list-style: none;
 }
 
+#user-card {
+    list-style: none;
+    list-style-type: none;
+}
 
 /*Circle Dot Glype*/
-
 .glyphicon.glyphicon-one-fine-dot:before {
     content: "\25cf";
     font-size: 20px;
