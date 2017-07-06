@@ -81,6 +81,9 @@ $(document).ready(function () {
                             $("#stockremain").fadeIn(4000);
                             setTimeout(function () {
                                 $("#saleincrease").effect("slide");
+                                setTimeout(function () {
+                                    $("#saleincrease2").effect("slide");
+                                }, 2000);
                             }, 2000);
                         }, 2000);
                         setTimeout(function () {
