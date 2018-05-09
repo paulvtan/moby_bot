@@ -12,16 +12,16 @@ to differentiate varying intents, and provides appropriate feedback depending on
 ## Business Management
 
 <p>
-<img src="img/1.0.jpg" width="200"/>
-<img src="img/1.1.jpg" width="200"/>
-<img src="img/1.2.jpg" width="200"/>
+<img src="img/1.0.PNG" width="200"/>
+<img src="img/1.1.PNG" width="200"/>
+<img src="img/1.2.PNG" width="200"/>
 </p>
 
 
 ## Actionable and Data Driven Advice
 
 <p>
-<img src="img/2.0.jpg" width="200"/>
-<img src="img/2.1.jpg" width="200"/>
-<img src="img/2.2.jpg" width="200"/>
+<img src="img/2.0.PNG" width="200"/>
+<img src="img/2.1.PNG" width="200"/>
+<img src="img/2.2.PNG" width="200"/>
 </p>
