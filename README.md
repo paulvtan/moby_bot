@@ -25,3 +25,9 @@ to differentiate varying intents, and provides appropriate feedback depending on
 <img src="img/2.1.PNG" width="300"/>
 <img src="img/2.2.PNG" width="300"/>
 </p>
+
+## Technology
+- Microsoft Bot Framework
+- Microsoft Q&A Maker
+- Azure Cloud Service
+- Front-End: HTML, CSS, JS
