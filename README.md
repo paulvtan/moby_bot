@@ -30,4 +30,4 @@ to differentiate varying intents, and provides appropriate feedback depending on
 - Microsoft Bot Framework
 - Microsoft Q&A Maker
 - Azure Cloud Service
-- Front-End: HTML, CSS, JS
+- Front-End: HTML, CSS, JS, Bootstrap
